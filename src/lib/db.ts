@@ -4,7 +4,8 @@ import fs from 'fs';
 import { SEEDED_USERS, User, Document, DocumentShare, DocumentAttachment, Permission } from '@/types';
 
 // Ensure data directory exists
-const dbDir = path.resolve(process.cwd(), 'data');
+const isVercel = !!process.env.VERCEL;
+const dbDir = isVercel ? path.resolve('/tmp', 'data') : path.resolve(process.cwd(), 'data');
 if (!fs.existsSync(dbDir)) {
   fs.mkdirSync(dbDir, { recursive: true });
 }
