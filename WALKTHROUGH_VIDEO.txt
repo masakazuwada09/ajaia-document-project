@@ -1,44 +1,21 @@
-AJAIA DOCS — WALKTHROUGH VIDEO LINK & TALKING POINTS
+AJAIA DOCS — WALKTHROUGH VIDEO DEMONSTRATIONS
 
-1. Video URL:
+Walkthrough Video Links:
 --------------------------------------------------------------------------------
-https://www.loom.com/share/ajaia-docs-walkthrough-demo
-(Replace with your unlisted Loom or YouTube URL prior to folder submission)
+1. Document Authoring & Auto-Save:
+   https://youtu.be/1ay-QYBYaw8
+   Covers: Rich-text authoring with TipTap/ProseMirror (bold, italic, underline, headings, lists, task checkboxes), Google Docs page canvas, debounced auto-save with live status indicators, inline title editing, word/character metrics, and document export (Markdown, HTML, Plain Text, PDF).
 
+2. File Ingestion & Attachments:
+   https://youtu.be/kbDX_xyKoBI
+   Covers: Multi-format file ingestion (.docx via Mammoth, .md via Marked, .txt), drag-and-drop file upload, in-editor import options, and the document attachments drawer (uploading, previewing, and downloading associated files up to 10MB).
 
-2. Video Structure (3-5 Minutes Suggested Script / Talking Points):
+3. Sharing Model & Role Enforcement:
+   https://youtu.be/K-J9-TAftQ8
+   Covers: 3-tier role hierarchy (Owner, Editor, Viewer), Google Docs share modal, in-app reviewer persona switcher (Alice, Bob, Charlie, Diana), live view-only mode enforcement, and HTTP 403 Access Denied protection for private documents.
+
+Project Repository:
 --------------------------------------------------------------------------------
-[00:00 - 00:45] Introduction & Context
-- Introduce yourself and summarize the objective: shipping a lightweight, robust collaborative doc editor for Ajaia's internal productivity needs within a 4-6 hour timebox.
-- Highlight the core product decisions: rich-text authoring, multi-format file ingestion (.docx/.md), clear role-based sharing (Owner/Editor/Viewer), and zero-friction reviewer persona switching.
-
-[00:45 - 01:45] End-to-End User Flow Demo
-- Start on the Dashboard as Alice Chen (Product Lead).
-- Showcase the distinction between "Owned by me" and "Shared with me" tabs.
-- Open "Ajaia Productivity Suite: Q4 Strategic Roadmap".
-- Demonstrate editing: bold, italic, underline, heading hierarchy, lists, and task list checkboxes.
-- Show auto-save status transitioning from "Saving..." to "All changes saved".
-- Rename the document title inline and show it updating dynamically.
-- Demonstrate document export (Markdown, HTML, Plain Text, Print/PDF).
-
-[01:45 - 02:45] File Ingestion & Attachments Demo
-- Show the "Import File" modal.
-- Upload a Markdown file (.md) or Word document (.docx) from ./sample-files/product-spec.md.
-- Show how Mammoth and Marked parse the content directly into an editable rich-text document.
-- Open the "Attachments" drawer and show uploading, previewing, and downloading associated files (specs, PDFs, images).
-
-[02:45 - 03:45] Sharing Model & Permission Enforcement
-- Open the "Share" modal on Alice's roadmap document.
-- Show existing collaborators (Bob has "Can edit", Charlie has "Can view").
-- Switch persona to Charlie Kim using the top-right header switcher.
-- Show how the document immediately transforms into read-only mode with the "View-Only" banner and locked toolbar.
-- Attempt to access Diana's private document (/doc/doc-ops-compensation) to demonstrate the HTTP 403 Access Denied screen.
-
-[03:45 - 04:45] Engineering Tradeoffs & Deprioritized Scope
-- Explain what was intentionally cut: real-time WebSocket CRDT cursors (in favor of reliable debounced auto-save) and third-party OAuth (in favor of in-app reviewer personas).
-- Discuss data architecture: SQLite with WAL mode for zero-config local persistence and instant query performance.
-
-[04:45 - 05:00] AI-Native Workflow Reflection
-- Mention where AI accelerated delivery: ProseMirror/TipTap setup, Mammoth .docx pipeline, integration test generation.
-- Highlight where AI output was rejected: avoided over-engineered OAuth systems and added strict server-side authorization guards to prevent client-only validation gaps.
-- Conclude and thank the reviewers.
+C:\projects\ajaia-docs
+Local Server: http://localhost:3000
+Automated Tests: npm test (8 integration tests passing)

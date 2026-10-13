@@ -17,7 +17,10 @@
 
 - **Local Development URL**: `http://localhost:3000`
 - **Live Deployment URL**: `http://localhost:3000` *(Run `npm start` for local production build, or deploy to Vercel/Render/Railway via the provided codebase)*
-- **Walkthrough Video URL**: See `WALKTHROUGH_VIDEO.txt` *(3–5 minute Loom / YouTube walkthrough covering main user flow, permissions, deprioritized items, and AI workflow)*
+- **Walkthrough Video URLs**:
+  - Document Authoring & Auto-Save: https://youtu.be/1ay-QYBYaw8
+  - File Ingestion & Attachments: https://youtu.be/kbDX_xyKoBI
+  - Sharing Model & Role Enforcement: https://youtu.be/K-J9-TAftQ8
 
 ---
 
