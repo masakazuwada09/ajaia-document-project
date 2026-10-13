@@ -1,0 +1,13 @@
+Weekly Product Sync - October 2026
+
+Attendees: Alice Chen, Bob Martinez, Charlie Kim, Diana Ross
+
+Agenda:
+1. Review Q4 Document Editor MVP progress.
+2. Verify role-based permission enforcement for Viewers and Editors.
+3. Validate multi-format document import from Word (.docx) and Markdown (.md).
+
+Action Items:
+- Bob: Finalize SQLite database persistence and automated test suite.
+- Charlie: Polish typography and paper canvas margins for desktop displays.
+- Diana: Prepare cross-functional internal rollout and team training.
